@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debut</title>
+<link rel="stylesheet" href="debut.css">
+</head>
+<body>
+
+<!-- EXIT BUTTON -->
+<a href="services.html"><button class="exit-btn">← Exit</button></a>
+
+<h2 class="subtitle">Our Works</h2>
+<h1 class="title">DEBUT</h1>
+
+<div class="carousel-container">
+
+  <button class="carousel-btn left" onclick="moveLeft()">❮</button>
+
+  <div class="carousel-track-wrapper">
+    <div class="carousel-track">
+
+      <img src="debut_pics/debut1.jpg" onclick="openImagePopup(this.src)">
+      <img src="debut_pics/debut2.jpg" onclick="openImagePopup(this.src)">
+      <img src="debut_pics/debut3.jpg" onclick="openImagePopup(this.src)">
+      <img src="debut_pics/debut4.jpg" onclick="openImagePopup(this.src)">
+
+    </div>
+  </div>
+
+  <button class="carousel-btn right" onclick="moveRight()">❯</button>
+
+</div>
+
+<!-- BOOK NOW BUTTON -->
+<button class="book-btn" onclick="openPopup()">Book Now</button>
+
+<!-- IMAGE POPUP -->
+<div class="image-popup" id="imagePopup" onclick="closeImagePopup(event)">
+  <img id="popupImage">
+</div>
+
+<!-- BOOKING POPUP -->
+<div class="popup-overlay" id="popupOverlay" onclick="closePopupOutside(event)">
+  <div class="popup-box" onclick="event.stopPropagation()">
+    <iframe src="Booking.html"></iframe>
+  </div>
+</div>
+
+<script src="debut.js"></script>
+
+</body>
+</html>
